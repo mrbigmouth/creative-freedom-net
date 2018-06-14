@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const eslintFormatter = require('eslint-friendly-formatter');
 /* eslint-enable import/no-extraneous-dependencies */
 
+const libPath = path.resolve(__dirname, 'lib');
 const sourcePath = path.resolve(__dirname, 'client', 'source');
 const destPath = path.resolve(__dirname, 'client', 'dest');
 module.exports = {
@@ -24,6 +25,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       vue$: 'vue/dist/vue.esm.js',
+      lib: libPath,
       '@': sourcePath,
     },
   },

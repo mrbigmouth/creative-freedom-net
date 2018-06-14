@@ -1,4 +1,5 @@
 const path = require('path');
+const libPath = path.resolve(__dirname, 'lib');
 const sourcePath = path.resolve(__dirname, 'client', 'source');
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       'alias': [
+        ['lib', libPath],
         ['@', sourcePath],
       ],
     },
